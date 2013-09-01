@@ -1,0 +1,107 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+/* TYPE */
+
+h1{
+	font-size: 42px;
+}
+h2{
+	font-size: 36px;
+}
+
+/* HEADER */
+
+header{
+	background: red;
+	width: 100%;
+	overflow-y: hidden;
+	margin: 0;
+	padding: 0;
+}
+nav{
+	position: relative;
+	height: 100px;
+	margin-top: -35px;
+	width: 100%;
+}
+.nav{
+	position: absolute;
+	height: 100px;
+	display: inline-block;
+	bottom: -27px;
+	left: 50%;
+	margin-left: -200px;
+}
+.nav h1,h2{
+	display: inline-block;
+}
+.nav h2{
+	padding-left: 10px;
+}
+
+/*CONTENT*/
+
+#page-wrap{
+	width: 100%;
+}
+.content{
+	height: 800px;
+	background: black;
+	color: white;
+}
+
+/* Porfolio */
+#portfolio{
+	padding-top: 20px;
+	width: 960px;
+	margin: 0 auto;
+}
+#portfolio header{
+	background: inherit;
+	text-align:center;
+}
+#portfolio header a{
+	font-size: 26px;
+	margin-left: 10px;
+	text-decoration: none;
+	color: inherit;
+}
+#portfolio header a:hover{
+	border-bottom: 5px solid white;
+}
+#portfolio img{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background: white;
+	padding: 10px;
+}
+#projects{
+	padding-left: 35px;
+	margin: 0 auto;
+}
+.project{
+	vertical-align: top;
+	display: inline-block;
+	width: 300px;
+}
+
+
+.clearfix:before,
+.clearfix:after{
+	content: '\0020';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0; 
+}
+.clearfix:after {
+	clear: both; 
+}
+.clearfix {
+	zoom: 1; 
+}
