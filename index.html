@@ -12,7 +12,7 @@
 <body>
 <header>
   <nav class="">
-    <div class="nav">
+    <div id="nav">
       <a href="#home" class="active logo">robotmayo</a>
       <a href="#portfolio">portfolio</a>
       <a href="#">github</a>
@@ -23,7 +23,7 @@
 </header>
 
 <div id="page-wrap">
-<section id="home">
+<section id="home" class="hide">
   <div class="home">
     <div id="id">
       <img src="" alt="">
@@ -38,13 +38,13 @@
 </section>
 
 
-<section id="portfolio" class="hide">
+<section id="portfolio" class="">
   <div class="portfolio">
-    <header>
+    <div class='sorter'>
       <a href="#" class="selected">Websites</a>
       <a href="#" class="selected">Art</a>
       <a href="#" class="selected">Games</a>
-    </header>
+    </div>
     <div id="projects">
       <div class="project">
         <div class="project-thumbnail"><a href="#"><img src="" alt=""></a></div>
@@ -73,6 +73,7 @@
 
 </div>
   <script type="text/javascript" src="js/lib/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery-easing.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
