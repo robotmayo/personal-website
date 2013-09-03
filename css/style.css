@@ -1,25 +1,75 @@
-body{
-	padding: 0;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline; 
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block; 
+}
+body {
+	line-height: 1; 
+}
+ol, ul {
+	list-style: none; 
+}
+blockquote, q {
+	quotes: none; 
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none; 
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0; 
+}
+/* RESET FROM SKELETON CSS */
+body{
+	font-family: 'Cabin', sans-serif;
+	height: 100%;
+	font-size: 14px;
 }
 
 /* TYPE */
 
 h1{
 	font-size: 42px;
+	margin: 8px;
 }
 h2{
 	font-size: 36px;
+}
+h3{
+	font-size: 32px;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+p{
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	font-size: 16px;
+	padding-left: 5px;
+	line-height: 24px;
 }
 
 /* HEADER */
 
 header{
-	background: red;
+	position: fixed;
+	background: #75D2E8;
 	width: 100%;
-	overflow-y: hidden;
 	margin: 0;
 	padding: 0;
+	height: 60px;
+	top: 0;
+	left: 0;
+	z-index: 10000;
 }
 nav{
 	position: relative;
@@ -28,54 +78,128 @@ nav{
 	width: 100%;
 }
 .nav{
-	position: absolute;
-	height: 100px;
-	display: inline-block;
-	bottom: -27px;
-	left: 50%;
-	margin-left: -200px;
+	text-align: center;
+	line-height: 124px;
 }
-.nav h1,h2{
-	display: inline-block;
-}
-.nav h2{
+.nav a{
 	padding-left: 10px;
+	font-size: 36px;
 }
-
+.logo{
+	font-size: 48px;
+	padding: 15px;
+	font-family: 'Roboto', sans-serif;
+}
+.nav a.logo{
+	position: absolute;
+	left: 0;
+	font-size: 48px;
+}
+.nav a:hover{
+	color: white;
+}
+.active{
+	color: white;
+}
+.logo{
+	font-family: 'Roboto', sans-serif;
+}
 /*CONTENT*/
 
 #page-wrap{
 	width: 100%;
+	color: #E8E6E5;
 }
-.content{
-	height: 800px;
-	background: black;
-	color: white;
+section{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	height: 100%;
+}
+.hide{
+	display: none;
+}
+/* Home */
+#home{
+	background: #5A62E8;
+	z-index: 100;
+}
+.home{
+	width: 960px;
+	margin: 0 auto;
+}
+#id{
+	margin-top: 20px;
+	float: left;
+}
+#home img{
+	width: 900px;
+	height: 200px;
+}
+#home h1{
+	font-family: 'Roboto', sans-serif;
+}
+#home .job{
+	font-size: 25px;
+	display: inline-block;
+	margin-bottom: 15px;
+	margin-right: 28px;
+}
+.job:after{
+	content : '|';
+	padding-left: 20px;
+}
+.job:last-child:after{
+	content: '';
+}
+#home p{
+	clear: both;
 }
 
 /* Porfolio */
 #portfolio{
+	background: #70ADFF;
+}
+.portfolio{
 	padding-top: 20px;
 	width: 960px;
+	max-width: 100%;
 	margin: 0 auto;
+	background: #70ADFF;
 }
-#portfolio header{
+.portfolio header{
 	background: inherit;
 	text-align:center;
+	margin-bottom: 20px;
+	height: auto;
 }
-#portfolio header a{
+.portfolio header a{
 	font-size: 26px;
 	margin-left: 10px;
 	text-decoration: none;
-	color: inherit;
+	color: white;
 }
-#portfolio header a:hover{
-	border-bottom: 5px solid white;
+.portfolio header a:hover{
+	
 }
-#portfolio img{
-	display: inline-block;
-	width: 200px;
-	height: 200px;
+/* 
+63FFE0
+75D2E8
+70ADFF
+5A62E8
+9863FF
+*/
+.selected{
+	background: #578A7B;
+	background: rgba(87, 138, 123, 0.5);
+}
+.project-thumbnail img{
+	display: block;
+	width: 940px;
+	height: 160px;
 	background: white;
 	padding: 10px;
 }
@@ -84,9 +208,23 @@ nav{
 	margin: 0 auto;
 }
 .project{
+	margin-top: 20px;
 	vertical-align: top;
-	display: inline-block;
+	display: block;
 	width: 300px;
+}
+.project-info{
+	display: none;
+}
+
+.project h3{
+	font-size: 32px;
+	padding: 0;
+	margin: 0;
+	margin-left: 5px
+}
+.project-info p {
+	margin-left: 15px;
 }
 
 
