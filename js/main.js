@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	var zindexes = [1000,900,800];
 	var zIndexList ={top:1000,behind:900,bottom:800};
 	var sections = [];
 	var activeSection;
@@ -22,10 +21,12 @@ $(document).ready(function(){
 			$('html,body').animate({scrollTop:0}, 400);
 			return;
 		}
+		$(this).parent().children().removeClass("active");
+		$(this).addClass('active');
+
 		lock = true;
 		if($(window).scrollTop() > 20){
 			$('html,body').animate({scrollTop:0}, 400, scrollComplete);
-			//$('body').animate({scrollTop:0}, 400, scrollComplete);
 		}else{
 			animatePage();
 		}
@@ -39,6 +40,7 @@ $(document).ready(function(){
 			$(this).css('z-index',zIndexList.behind);
 			activeSection.css('z-index',zIndexList.top);
 			$(this).css('left',0);
+			$(this).hide();
 			lock = false;
 		});
 		activeSection = selection;
