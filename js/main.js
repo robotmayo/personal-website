@@ -12,7 +12,7 @@ $(document).ready(function(){
 		sections[i].hide();
 	}
 	activeSection = sections[0];
-	activeSection.css('z-index',zindexes[0]);
+	activeSection.css('z-index',zIndexList.top);
 
 	$('#nav').children('a').click(function(e){
 		e.preventDefault();
@@ -32,12 +32,12 @@ $(document).ready(function(){
 		
 	});
 	function animatePage(){
-		selection.css('z-index',zindexes[1]);
+		selection.css('z-index',zIndexList.behind);
 		var scrollBottom = $(window).scrollTop() + $(window).height();
 		selection.show();
 		activeSection.animate({'left': -activeSection.width()},800,"easeInExpo",function(){
-			$(this).css('z-index',zindexes[1]);
-			activeSection.css('z-index',zindexes[0]);
+			$(this).css('z-index',zIndexList.behind);
+			activeSection.css('z-index',zIndexList.top);
 			$(this).css('left',0);
 			lock = false;
 		});
