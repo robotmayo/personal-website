@@ -28,6 +28,7 @@ table {
 	border-spacing: 0; 
 }
 /* RESET FROM SKELETON CSS */
+
 body{
 	font-family: 'Cabin', sans-serif;
 	height: 100%;
@@ -117,7 +118,8 @@ section{
 	width: 100%;
 	padding-top: 15px;
 	padding-bottom: 20px;
-	height: 100%;
+	height: auto;
+	min-height: 100%;
 }
 .hide{
 	display: none;
@@ -125,7 +127,6 @@ section{
 /* Home */
 #home{
 	background: #5A62E8;
-	z-index: 100;
 }
 .home{
 	width: 960px;
@@ -168,20 +169,20 @@ section{
 	margin: 0 auto;
 	background: #70ADFF;
 }
-.portfolio .sorter{
+.portfolio .sort{
 	padding-top: 25px;
 	background: inherit;
 	text-align:center;
 	margin-bottom: 20px;
 	
 }
-.portfolio .sorter a{
+.portfolio .sort a{
 	font-size: 26px;
 	margin-left: 10px;
 	text-decoration: none;
 	color: white;
 }
-.portfolio .sorter a:hover{
+.portfolio .sort a:hover{
 	
 }
 /* 
@@ -226,7 +227,16 @@ section{
 	margin-left: 15px;
 }
 
-
+/* Javascript */
+.js-top{
+	z-index: 1000;
+}
+.js-under-top{
+	z-index: 900;
+}
+.js-bottom{
+	z-index: 800;
+}
 .clearfix:before,
 .clearfix:after{
 	content: '\0020';
