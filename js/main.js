@@ -34,7 +34,6 @@ $(document).ready(function(){
 	});
 	function animatePage(){
 		selection.css('z-index',zIndexList.behind);
-		var scrollBottom = $(window).scrollTop() + $(window).height();
 		selection.show();
 		activeSection.animate({'left': -activeSection.width()},800,"easeInExpo",function(){
 			$(this).css('z-index',zIndexList.behind);
@@ -53,4 +52,13 @@ $(document).ready(function(){
 		scrolled = true;
 		animatePage();
 	}
+	$('.portfolio').find('.project-thumbnail').children('a').on('mouseenter',function(){
+		$(this).next().stop(true).animate({'bottom':0},400);
+	}).on('mouseleave',function(){
+		$(this).next().stop(true).animate({'bottom':-50},400);
+	}).on('click',function(){
+		
+	})
+
+
 });
