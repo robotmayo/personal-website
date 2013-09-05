@@ -14,9 +14,13 @@ $(document).ready(function(){
 	activeSection.css('z-index',zIndexList.top);
 
 	$('#nav').children('a').click(function(e){
-		e.preventDefault();
 		if(lock) return;
+		if($(this).attr('href').charAt(0) != '#'){
+			return;
+		}
+		e.preventDefault();
 		selection = $($(this).attr('href'));
+
 		if(selection[0] == activeSection[0]){
 			$('html,body').animate({scrollTop:0}, 400);
 			return;
@@ -52,13 +56,17 @@ $(document).ready(function(){
 		scrolled = true;
 		animatePage();
 	}
+	$('.project-info').hide();
 	$('.portfolio').find('.project-thumbnail').children('a').on('mouseenter',function(){
 		$(this).next().stop(true).animate({'bottom':0},400);
 	}).on('mouseleave',function(){
 		$(this).next().stop(true).animate({'bottom':-50},400);
-	}).on('click',function(){
+	}).on('click',function(evt){
+		var self = $(this);
+		evt.preventDefault();
+		self.parent().next().slideToggle(400);
+	});
 		
-	})
 
 
 });

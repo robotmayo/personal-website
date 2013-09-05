@@ -222,7 +222,7 @@ section{
 	display: block;
 }
 .project-info{
-	
+	padding-bottom: 10px;
 }
 
 .project h3{
@@ -233,6 +233,7 @@ section{
 }
 .project-info p {
 	margin-left: 15px;
+	margin-bottom: 0;
 }
 .see-more{
 	width: 0px;
