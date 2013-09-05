@@ -181,6 +181,7 @@ section{
 	margin-left: 10px;
 	text-decoration: none;
 	color: white;
+	padding: 5px 10px;
 }
 .portfolio .sort a:hover{
 	
@@ -196,12 +197,20 @@ section{
 	background: #578A7B;
 	background: rgba(87, 138, 123, 0.5);
 }
+.project-thumbnail{
+	position: relative;
+	height: auto;
+	overflow: hidden;
+}
 .project-thumbnail img{
 	display: block;
 	width: 940px;
 	height: 160px;
 	background: white;
 	padding: 10px;
+}
+.project-thumbnail a{
+	display: block;
 }
 #projects{
 	padding-left: 35px;
@@ -211,10 +220,9 @@ section{
 	margin-top: 20px;
 	vertical-align: top;
 	display: block;
-	width: 300px;
 }
 .project-info{
-	display: none;
+	
 }
 
 .project h3{
@@ -225,6 +233,24 @@ section{
 }
 .project-info p {
 	margin-left: 15px;
+}
+.see-more{
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 50px 0 0 50px;
+	border-color: transparent transparent transparent red;
+	position: absolute;
+	left: 0;
+	bottom: -50px;
+	z-index: 1000;
+}
+.see-more > span{
+	position: absolute;
+	left: -50px;
+	bottom: 0;
+	color: white;
+	cursor: pointer;
 }
 
 /* Javascript */
